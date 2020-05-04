@@ -1,43 +1,7 @@
 from enum import Enum
 from queue import PriorityQueue
 import numpy as np
-import utm
 
-
-def global_to_local(global_position, global_home):
-    """ 
-    Converts global coordinates (lat, lon, lat) to local coordinates using 
-    UTM (Universal Transverse Mercator) as an intermediate.
-
-    See Motion Planning Lesson 2.5: "Geodetic to NED Exercise".
-
-    From the exercise: 
-    "To convert a GPS position (longitude, latitude, altitude) to a local 
-     position (north, east, down) you need to define a global home position 
-     as the origin of your NED coordinate frame. In general this might be 
-     the position your vehicle is in when the motors are armed, or some 
-     other home base position."
-    """
-    local_position = np.array([0, 0, 0])
-
-    # Note: UTM also includes a zone number and letter, which we can ignore 
-    # for our purposes.
-    # The function has the following call format:
-    #   (easting, northing, zone_number, zone_letter) = utm.from_latlon(latitude, longitude)
-    (east_home, north_home, _, _) = utm.from_latlon(global_home[1], global_home[0])
-    (east, north, _, _) = utm.from_latlon(global_position[1], global_position[0])
-    utm_home = utm.from_latlon(global_home[1], global_home[0])
-    utm_pos  = utm.from_latlon(global_position[1], global_position[0])
-    
-    # North
-    local_position[0] = north - north_home
-    # East
-    local_position[1] = east - east_home
-    # Down 
-    # (assumes global_position altitude is higher than the global home altitude)
-    local_position[2] = (global_position[2] - global_home[2]) * -1
-    
-    return local_position
 
 def create_grid(data, drone_altitude, safety_distance):
     """
@@ -93,6 +57,10 @@ class Action(Enum):
     EAST = (0, 1, 1)
     NORTH = (-1, 0, 1)
     SOUTH = (1, 0, 1)
+    NORTHEAST = (-1, 1, np.sqrt(2))
+    NORTHWEST = (-1, -1, np.sqrt(2))
+    SOUTHEAST = (1, 1, np.sqrt(2))
+    SOUTHWEST = (1, -1, np.sqrt(2))
 
     @property
     def cost(self):
@@ -122,6 +90,22 @@ def valid_actions(grid, current_node):
         valid_actions.remove(Action.WEST)
     if y + 1 > m or grid[x, y + 1] == 1:
         valid_actions.remove(Action.EAST)
+    if ((x-1 < 0) or 
+        (y+1 > m) or
+        (grid[x-1, y+1] == 1)):
+        valid_actions.remove(Action.NORTHEAST)
+    if ((x-1 < 0) or 
+        (y-1 < 0) or
+        (grid[x-1, y-1] == 1)):
+        valid_actions.remove(Action.NORTHWEST)
+    if ((x+1 > n) or 
+        (y+1 > m) or
+        (grid[x+1, y+1] == 1)):
+        valid_actions.remove(Action.SOUTHEAST)
+    if ((x+1 > n) or 
+        (y-1 < 0) or
+        (grid[x+1, y-1] == 1)):
+        valid_actions.remove(Action.SOUTHWEST)
 
     return valid_actions
 
@@ -178,9 +162,87 @@ def a_star(grid, h, start, goal):
     return path[::-1], path_cost
 
 
-
 def heuristic(position, goal_position):
     # Note: This is Euclidean distance, which works for both gird and 
     # graph based discretizations of the environment.
     return np.linalg.norm(np.array(position) - np.array(goal_position))
 
+
+#TODO: Document these functions. What version of collinearity? Where pulled from?
+def point(p):
+    return np.array([p[0], p[1], 1.]).reshape(1, -1)
+
+def collinearity_check(p1, p2, p3, epsilon=1e-6):   
+    m = np.concatenate((p1, p2, p3), 0)
+    det = np.linalg.det(m)
+    return abs(det) < epsilon
+
+def prune_path(path):
+    """
+    """
+    pruned_path = [p for p in path]
+    
+    i = 0
+    while i < len(pruned_path) - 2:
+        p1 = point(pruned_path[i])
+        p2 = point(pruned_path[i+1])
+        p3 = point(pruned_path[i+2])
+        
+        # If the 3 points are in a line remove
+        # the 2nd point.
+        # The 3rd point now becomes and 2nd point
+        # and the check is redone with a new third point
+        # on the next iteration.
+        if collinearity_check(p1, p2, p3):
+            # Something subtle here but we can mutate
+            # `pruned_path` freely because the length
+            # of the list is check on every iteration.
+            pruned_path.remove(pruned_path[i+1])
+        else:
+            i += 1
+    return pruned_path
+
+# def prune_path(path):
+#     if path is not None:
+#         pruned_path = []
+
+#         # At a selected point, grab the next two. If they are all collinear,
+#         # then remove the middle point. If they aren't increment to the 
+#         # next point.
+#         start = 0
+#         mid = 1
+#         end = 2
+        
+#         end_collinear = False
+        
+#         # Keep pruning until our 3rd point is the last in the path.
+#         while(end < len(path)-1):
+    
+#             pruned_path.append(path[start])
+            
+#             while (collinearity_check(point(path[start]), point(path[mid]), point(path[end]))):
+                
+#                 if (end < len(path)-1):
+#                     # Move to the next point to test.
+#                     mid  = end
+#                     end += 1
+#                 else:
+#                     # end is the last point, and everything is collinear.
+#                     break
+
+#             if (end < len(path)-1):
+#                 # Scoot all points
+#                 start = mid
+#                 mid   = end
+#                 end  += 1
+#             else:
+#                 # Reached the end, and last points not collinear. Add mid.
+#                 pruned_path.append(path[mid])
+                    
+#         # Always add the last point (destination)
+#         pruned_path.append(path[len(path)-1])
+            
+#     else:
+#         pruned_path = path
+        
+#     return pruned_path

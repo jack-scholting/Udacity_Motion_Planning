@@ -38,7 +38,7 @@ TODO: Design decisions - grid/graph, search alg, waypoint simplication alg, etc.
 
 TODO: Make sure to add 5+m safety margin to account for "mismatch between the coliders map and the actual buildings in the simulator scene."
 
-TODO: Video of starter code. Video of final code.
+TODO: Video of starter code. Video of final code. Before diagonals. Before collinearity test.
 
 ## Verification
 

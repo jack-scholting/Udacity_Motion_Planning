@@ -5,7 +5,7 @@ from enum import Enum, auto
 
 import numpy as np
 
-from planning_utils import a_star, heuristic, create_grid
+from planning_utils import a_star, heuristic, create_grid, prune_path
 from udacidrone import Drone
 from udacidrone.connection import MavlinkConnection
 from udacidrone.messaging import MsgID
@@ -137,6 +137,7 @@ class MotionPlanning(Drone):
         #  of the local NED frame and therefore adjusts the local position information."
         self.set_home_position(lon_float, lat_float, 0)
 
+        # Determine the local position.
         global_pos = [self._longitude, self._latitude, self._altitude]
         local_pos = global_to_local(global_pos, self.global_home)
         
@@ -144,32 +145,36 @@ class MotionPlanning(Drone):
                                                                          self.local_position))
         # Read in obstacle map
         data = np.loadtxt('colliders.csv', delimiter=',', dtype='Float64', skiprows=2)
-        print(data)
         
         # Define a grid for a particular altitude and safety margin around obstacles
         grid, north_offset, east_offset = create_grid(data, TARGET_ALTITUDE, SAFETY_DISTANCE)
         print("North offset = {0}, east offset = {1}".format(north_offset, east_offset))
-        # Define starting point on the grid (this is just grid center)
+
+        # Define starting point on the grid as the current position.
         grid_start = (int(local_pos[0]-north_offset), int(local_pos[1]-east_offset))
-        # TODO: convert start position to current position rather than map center
         
-        # Set goal as some arbitrary position on the grid
-        grid_goal = (grid_start[0] + 10, grid_start[1] + 10)
         # TODO: adapt to set goal as latitude / longitude position and convert
+        # TODO: I don't even know some valid test ones.
+        grid_goal = (grid_start[0] + 10, grid_start[1] + 10)
 
         # Run A* to find a path from start to goal
-        # TODO: add diagonal motions with a cost of sqrt(2) to your A* implementation
-        # or move to a different search space such as a graph (not done here)
         print('Local Start and Goal: ', grid_start, grid_goal)
         path, _ = a_star(grid, heuristic, grid_start, grid_goal)
-        # TODO: prune path to minimize number of waypoints
-        # TODO (if you're feeling ambitious): Try a different approach altogether!
+
+        # TODO: we should gracefully handle when there is no path that can be found.
+
+        # Prune path to minimize number of waypoints
+        pruned_path = prune_path(path)
+        print("Path before pruning: {}".format(path))
+        print("Path after pruning: {}".format(pruned_path))
 
         # Convert path to waypoints
-        waypoints = [[p[0] + north_offset, p[1] + east_offset, TARGET_ALTITUDE, 0] for p in path]
+        waypoints = [[p[0] + north_offset, p[1] + east_offset, TARGET_ALTITUDE, 0] for p in pruned_path]
+
         # Set self.waypoints
         self.waypoints = waypoints
-        # TODO: send waypoints to sim (this is just for visualization of waypoints)
+
+        # Send waypoints to sim for visualization.
         self.send_waypoints()
 
     def start(self):
