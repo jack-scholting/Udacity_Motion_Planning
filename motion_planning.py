@@ -119,28 +119,42 @@ class MotionPlanning(Drone):
 
         self.target_position[2] = TARGET_ALTITUDE
 
-        # TODO: read lat0, lon0 from colliders into floating point values
-        
-        # TODO: set home position to (lon0, lat0, 0)
+        # Note: The "Configuration Space Exercise" says the first line of 
+        # colliders.csv will be the latitude and longitude of the center of the
+        # map.
+        # Note: The following code makes the assumption that the first line of 
+        # colliders.csv has the following format:
+        #    lat0 37.792480, lon0 -122.397450
+        with open("colliders.csv") as f:
+            first_line = f.readlines()[0]
+            lat_str, lon_str = first_line.split(",")
+            lat_float = np.float64(lat_str.split(" ")[1])
+            lon_float = np.float64(lon_str.split(" ")[2])
 
-        # TODO: retrieve current global position
- 
-        # TODO: convert to current local position using global_to_local()
+        # Per the assignment, the global home should be set to the map center.
+        # From the documentation:
+        # "Set the GPS home position for the drone. This changes the origin point
+        #  of the local NED frame and therefore adjusts the local position information."
+        self.set_home_position(lon_float, lat_float, 0)
+
+        global_pos = [self._longitude, self._latitude, self._altitude]
+        local_pos = global_to_local(global_pos, self.global_home)
         
         print('global home {0}, position {1}, local position {2}'.format(self.global_home, self.global_position,
                                                                          self.local_position))
         # Read in obstacle map
         data = np.loadtxt('colliders.csv', delimiter=',', dtype='Float64', skiprows=2)
+        print(data)
         
         # Define a grid for a particular altitude and safety margin around obstacles
         grid, north_offset, east_offset = create_grid(data, TARGET_ALTITUDE, SAFETY_DISTANCE)
         print("North offset = {0}, east offset = {1}".format(north_offset, east_offset))
         # Define starting point on the grid (this is just grid center)
-        grid_start = (-north_offset, -east_offset)
+        grid_start = (int(local_pos[0]-north_offset), int(local_pos[1]-east_offset))
         # TODO: convert start position to current position rather than map center
         
         # Set goal as some arbitrary position on the grid
-        grid_goal = (-north_offset + 10, -east_offset + 10)
+        grid_goal = (grid_start[0] + 10, grid_start[1] + 10)
         # TODO: adapt to set goal as latitude / longitude position and convert
 
         # Run A* to find a path from start to goal

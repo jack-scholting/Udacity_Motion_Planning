@@ -1,7 +1,43 @@
 from enum import Enum
 from queue import PriorityQueue
 import numpy as np
+import utm
 
+
+def global_to_local(global_position, global_home):
+    """ 
+    Converts global coordinates (lat, lon, lat) to local coordinates using 
+    UTM (Universal Transverse Mercator) as an intermediate.
+
+    See Motion Planning Lesson 2.5: "Geodetic to NED Exercise".
+
+    From the exercise: 
+    "To convert a GPS position (longitude, latitude, altitude) to a local 
+     position (north, east, down) you need to define a global home position 
+     as the origin of your NED coordinate frame. In general this might be 
+     the position your vehicle is in when the motors are armed, or some 
+     other home base position."
+    """
+    local_position = np.array([0, 0, 0])
+
+    # Note: UTM also includes a zone number and letter, which we can ignore 
+    # for our purposes.
+    # The function has the following call format:
+    #   (easting, northing, zone_number, zone_letter) = utm.from_latlon(latitude, longitude)
+    (east_home, north_home, _, _) = utm.from_latlon(global_home[1], global_home[0])
+    (east, north, _, _) = utm.from_latlon(global_position[1], global_position[0])
+    utm_home = utm.from_latlon(global_home[1], global_home[0])
+    utm_pos  = utm.from_latlon(global_position[1], global_position[0])
+    
+    # North
+    local_position[0] = north - north_home
+    # East
+    local_position[1] = east - east_home
+    # Down 
+    # (assumes global_position altitude is higher than the global home altitude)
+    local_position[2] = (global_position[2] - global_home[2]) * -1
+    
+    return local_position
 
 def create_grid(data, drone_altitude, safety_distance):
     """
@@ -37,6 +73,8 @@ def create_grid(data, drone_altitude, safety_distance):
                 int(np.clip(east + d_east + safety_distance - east_min, 0, east_size-1)),
             ]
             grid[obstacle[0]:obstacle[1]+1, obstacle[2]:obstacle[3]+1] = 1
+
+    print("N min {}, N max {}, E min {}, E max {}, N size{}, E size {}".format(north_min, north_max, east_min, east_max, north_size, east_size))
 
     return grid, int(north_min), int(east_min)
 
@@ -142,5 +180,7 @@ def a_star(grid, h, start, goal):
 
 
 def heuristic(position, goal_position):
+    # Note: This is Euclidean distance, which works for both gird and 
+    # graph based discretizations of the environment.
     return np.linalg.norm(np.array(position) - np.array(goal_position))
 
