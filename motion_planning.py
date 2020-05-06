@@ -11,6 +11,15 @@ from udacidrone.connection import MavlinkConnection
 from udacidrone.messaging import MsgID
 from udacidrone.frame_utils import global_to_local
 
+"""
+Test Points
+The following goals are geodetic coordinates within the colliders.csv map.
+    TODO: 
+Note: Map center is: -122.397450, 37.792480
+Note: Format is LON, LAT.
+"""
+SF_FINANCIAL_DISTRICT = [-122.402004, 37.791022]
+GOAL_POSITION = SF_FINANCIAL_DISTRICT
 
 class States(Enum):
     MANUAL = auto()
@@ -155,8 +164,14 @@ class MotionPlanning(Drone):
         
         # TODO: adapt to set goal as latitude / longitude position and convert
         # TODO: I don't even know some valid test ones.
-        grid_goal = (grid_start[0] + 10, grid_start[1] + 10)
+        # grid_goal = (grid_start[0] + 10, grid_start[1] + 10)
+        global_goal = GOAL_POSITION + [self._altitude]
+        local_goal = global_to_local(global_goal, self.global_home)
+        grid_goal = (int(local_goal[0]-north_offset), int(local_goal[1]-east_offset))
 
+        #TODO: My a_star() is taking way to long when I have a point on the other end 
+        # of the map, and even worse when I include the diagonal possibility.
+        # It is my computer too slow? Is my single test point bad? Is a_star implementation bad?
         # Run A* to find a path from start to goal
         print('Local Start and Goal: ', grid_start, grid_goal)
         path, _ = a_star(grid, heuristic, grid_start, grid_goal)
@@ -164,8 +179,8 @@ class MotionPlanning(Drone):
         # TODO: we should gracefully handle when there is no path that can be found.
 
         # Prune path to minimize number of waypoints
-        pruned_path = prune_path(path)
         print("Path before pruning: {}".format(path))
+        pruned_path = prune_path(path)
         print("Path after pruning: {}".format(pruned_path))
 
         # Convert path to waypoints

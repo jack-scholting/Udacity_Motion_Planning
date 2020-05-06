@@ -90,22 +90,22 @@ def valid_actions(grid, current_node):
         valid_actions.remove(Action.WEST)
     if y + 1 > m or grid[x, y + 1] == 1:
         valid_actions.remove(Action.EAST)
-    if ((x-1 < 0) or 
-        (y+1 > m) or
-        (grid[x-1, y+1] == 1)):
-        valid_actions.remove(Action.NORTHEAST)
-    if ((x-1 < 0) or 
-        (y-1 < 0) or
-        (grid[x-1, y-1] == 1)):
-        valid_actions.remove(Action.NORTHWEST)
-    if ((x+1 > n) or 
-        (y+1 > m) or
-        (grid[x+1, y+1] == 1)):
-        valid_actions.remove(Action.SOUTHEAST)
-    if ((x+1 > n) or 
-        (y-1 < 0) or
-        (grid[x+1, y-1] == 1)):
-        valid_actions.remove(Action.SOUTHWEST)
+    # if ((x-1 < 0) or 
+    #     (y+1 > m) or
+    #     (grid[x-1, y+1] == 1)):
+    #     valid_actions.remove(Action.NORTHEAST)
+    # if ((x-1 < 0) or 
+    #     (y-1 < 0) or
+    #     (grid[x-1, y-1] == 1)):
+    #     valid_actions.remove(Action.NORTHWEST)
+    # if ((x+1 > n) or 
+    #     (y+1 > m) or
+    #     (grid[x+1, y+1] == 1)):
+    #     valid_actions.remove(Action.SOUTHEAST)
+    # if ((x+1 > n) or 
+    #     (y-1 < 0) or
+    #     (grid[x+1, y-1] == 1)):
+    #     valid_actions.remove(Action.SOUTHWEST)
 
     return valid_actions
 
@@ -142,6 +142,7 @@ def a_star(grid, h, start, goal):
                 queue_cost = branch_cost + h(next_node, goal)
                 
                 if next_node not in visited:                
+                    # print(next_node)
                     visited.add(next_node)               
                     branch[next_node] = (branch_cost, current_node, action)
                     queue.put((queue_cost, next_node))
