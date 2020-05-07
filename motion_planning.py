@@ -9,16 +9,21 @@ from planning_utils import a_star, heuristic, create_grid, prune_path
 from udacidrone import Drone
 from udacidrone.connection import MavlinkConnection
 from udacidrone.messaging import MsgID
-from udacidrone.frame_utils import global_to_local
+from udacidrone.frame_utils import global_to_local, local_to_global
 
 """
 Test Points
 The following goals are geodetic coordinates within the colliders.csv map.
-    TODO: 
 Note: Map center is: -122.397450, 37.792480
 Note: Format is LON, LAT.
 """
 SF_FINANCIAL_DISTRICT = [-122.402004, 37.791022]
+CALIFORNIA_ST = [-122.396344, 37.793877]
+POINT_01 = [-122.399050, 37.793160]
+POINT_02 = [-122.397770, 37.794369]
+ON_TALL_BUILDING = [-122.399270, 37.793050]
+
+# Goal position used during planning.
 GOAL_POSITION = SF_FINANCIAL_DISTRICT
 
 class States(Enum):
@@ -147,50 +152,49 @@ class MotionPlanning(Drone):
         self.set_home_position(lon_float, lat_float, 0)
 
         # Determine the local position.
-        global_pos = [self._longitude, self._latitude, self._altitude]
-        local_pos = global_to_local(global_pos, self.global_home)
+        local_pos = global_to_local(self.global_position, self.global_home)
         
-        print('global home {0}, position {1}, local position {2}'.format(self.global_home, self.global_position,
-                                                                         self.local_position))
+        print("Global Home: {}".format(self.global_home))
+        print("Global Position: {}".format(self.global_position))
+        print("Local Position: {}".format(self.local_position))
+
         # Read in obstacle map
         data = np.loadtxt('colliders.csv', delimiter=',', dtype='Float64', skiprows=2)
         
         # Define a grid for a particular altitude and safety margin around obstacles
         grid, north_offset, east_offset = create_grid(data, TARGET_ALTITUDE, SAFETY_DISTANCE)
-        print("North offset = {0}, east offset = {1}".format(north_offset, east_offset))
+        print("Grid Offsets: North {}, East {}".format(north_offset, east_offset))
 
         # Define starting point on the grid as the current position.
         grid_start = (int(local_pos[0]-north_offset), int(local_pos[1]-east_offset))
         
-        # TODO: adapt to set goal as latitude / longitude position and convert
-        # TODO: I don't even know some valid test ones.
-        # grid_goal = (grid_start[0] + 10, grid_start[1] + 10)
+        # Define a goal point.
         global_goal = GOAL_POSITION + [self._altitude]
         local_goal = global_to_local(global_goal, self.global_home)
         grid_goal = (int(local_goal[0]-north_offset), int(local_goal[1]-east_offset))
 
-        #TODO: My a_star() is taking way to long when I have a point on the other end 
-        # of the map, and even worse when I include the diagonal possibility.
-        # It is my computer too slow? Is my single test point bad? Is a_star implementation bad?
         # Run A* to find a path from start to goal
-        print('Local Start and Goal: ', grid_start, grid_goal)
+        print("Local Start: {}".format(grid_start))
+        print("Local Goal: {}".format(grid_goal))
         path, _ = a_star(grid, heuristic, grid_start, grid_goal)
 
-        # TODO: we should gracefully handle when there is no path that can be found.
+        if not path:
+            # Gracefully handle the case where we cannot find a path during planning.
+            self.disarming_transition()
+        else:
+            # Prune path to minimize number of waypoints
+            print("Path before pruning: {}".format(path))
+            pruned_path = prune_path(path)
+            print("Path after pruning: {}".format(pruned_path))
 
-        # Prune path to minimize number of waypoints
-        print("Path before pruning: {}".format(path))
-        pruned_path = prune_path(path)
-        print("Path after pruning: {}".format(pruned_path))
+            # Convert path to waypoints
+            waypoints = [[p[0] + north_offset, p[1] + east_offset, TARGET_ALTITUDE, 0] for p in pruned_path]
 
-        # Convert path to waypoints
-        waypoints = [[p[0] + north_offset, p[1] + east_offset, TARGET_ALTITUDE, 0] for p in pruned_path]
+            # Set self.waypoints
+            self.waypoints = waypoints
 
-        # Set self.waypoints
-        self.waypoints = waypoints
-
-        # Send waypoints to sim for visualization.
-        self.send_waypoints()
+            # Send waypoints to sim for visualization.
+            self.send_waypoints()
 
     def start(self):
         self.start_log("Logs", "NavLog.txt")
