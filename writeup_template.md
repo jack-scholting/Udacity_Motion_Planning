@@ -6,13 +6,13 @@
 
 This is the "3D Motion Planning" project in the Udacity Flying Car NanoDegree program. It is one of the 3 major projects in the program.
 
-One of the core problems of making Flying Cars (autonomous flying vehicles), is motion planning. These flying cars will need to know how to navigate our world, given a starting point (passenger pickup location) and ending point (passenger destionation). You can't get from A to B in the real world by flying a straight line between them at a fixed altitude. Instead, the flying car will have to avoid obstacles and maybe fly some pre-determined routes.
+One of the core problems of making Flying Cars (autonomous flying vehicles), is motion planning. These flying cars will need to know how to navigate our world, given a starting point (passenger pickup location) and ending point (passenger destination). You can't get from A to B in the real world by flying a straight line between them at a fixed altitude. Instead, the flying car will have to avoid obstacles and maybe fly some pre-determined routes.
 
 So 3D Motion Planning involves the following things:
 
 - Represent the world - discretize the world into a grid/graph from a map.
 - Define start and goal positions - coordinate systems.
-- Use a search algorithm and waypoint simplification algorithm to find an efficient path through the obstactles to our goal.
+- Use a search algorithm and waypoint simplification algorithm to find an efficient path through the obstactles to the goal.
 
 In order to make this project feasible within the time constraints of the nanodegree, some resources are provided:
 
@@ -27,7 +27,7 @@ The following simplifications are made for this project:
 - We assume our sensors (position) provide perfect information.
 - We assume our flying car is the only moving object in the environment.
 - We assume there are no environmental disturbances, such as gusts of wind.
-- There is no requirement for how accurate he landing must be on the goal location.
+- There is no requirement for how accurate the landing must be on the goal location.
 
 TODO: - finish this set of assumptions. Maybe add some mitigations.
 
@@ -36,29 +36,18 @@ This project is set up to ascend to a particular altitude, fly a path at that fi
 
 TODO: Design decisions - grid/graph, search alg, waypoint simplication alg, etc.
 
-TODO: Make sure to add 5+m safety margin to account for "mismatch between the coliders map and the actual buildings in the simulator scene."
-
 TODO: Video of starter code. Video of final code. Before diagonals. Before collinearity test.
+
+TODO: Include the diff report.
 
 ## Verification
 
 1. Set some different start locations.
 1. Set some different goal locations.
 
-## Required Steps for a Passing Submission
-
-1. Load the 2.5D map in the colliders.csv file describing the environment.
-2. Discretize the environment into a grid or graph representation.
-3. Define the start and goal locations.
-4. Perform a search using A* or other search algorithm.
-5. Use a collinearity test or ray tracing method (like Bresenham) to remove unnecessary waypoints.
-6. Return waypoints in local ECEF coordinates (format for `self.all_waypoints` is [N, E, altitude, heading], where the drone’s start location corresponds to [0, 0, 0, 0].
-7. Write it up.
-8. Congratulations!  Your Done!
-
 ## [Rubric](https://review.udacity.com/#!/rubrics/1534/view) Points
 
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation  
+### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.
 
 ---
 
@@ -72,7 +61,7 @@ You're reading it! Below I describe how I addressed each rubric point and where 
 
 #### 1. Explain the functionality of what's provided in `motion_planning.py` and `planning_utils.py`
 
-The motion planning starter code can be thought of as the "Backyard Flyer" code, with one major modification - the four static "box" waypoints are replaced by a more flexible **planning** step.
+The motion planning starter code can be thought of as the "Backyard Flyer" code, with one major modification - the four static "box" waypoints are replaced by a more flexible **planning** step that determines the waypoints.
 
 To add this planning step, first a "PLANNING" state was introduced. (see definition "States(Enum)")
 
@@ -94,14 +83,6 @@ The starter code assumes the home position is where the drone first initializes,
 
 Here students should read the first line of the csv file, extract lat0 and lon0 as floating point values and use the self.set_home_position() method to set global home. Explain briefly how you accomplished this in your code.
 
-TODO: Why does the global home position matter?
-
-TODO: Positions/Terminology:
-
-- Current Position - can either be global or local. You find global with a sensor like a GPS. You find local by knowing where the local home (0,0) is located globally.
-- Starting Position - this is where you start planning I guess. Seems like it should always be your current position.
-- Goal Position - arbitrarily set by anyone. Can be global or local coordinates.
-
 #### 2. Set your current local position
 
 The starter code assumes the drone takes off from the map center, but it will need to be able to takeoff from anywhere.
@@ -112,14 +93,6 @@ Here as long as you successfully determine your local position relative to globa
 
 #### 3. Set grid start position from local position
 
-TODO: 
-
-- So grid (0,0) is lower left corner of the grid.
-- But the coordinates in colliders.csv have the middle of the map as (0,0), like a home position.
-- My drone local position is based off the global home being the center of the map.
-- This means if I have a local position, and want to get the correct grid location, I need to apply an offset to move my center point from the center of the map to the bottom left corner.
-- This offset is most southern and most western point (min north, east).
-
 The starter code assumes planning is always done from the map center. Instead, it should be done from the current local position.
 
 This is another step in adding flexibility to the start location. As long as it works you're good to go!
@@ -129,8 +102,6 @@ This is another step in adding flexibility to the start location. As long as it 
 The starter code hardcoded the goal position as some location 10m north and 10m east of map center. This code needed to be modified to allow the goal to be set to any arbitrary position on the grid given geodetic coordinates (latitude, longitude).
 
 This step is to add flexibility to the desired goal location. Should be able to choose any (lat, lon) within the map and have it rendered to a goal location on the grid.
-
-TODO: how should the goal be set? Just a constant in the file?
 
 #### 5. Modify A* to include diagonal motion (or replace A* altogether)
 

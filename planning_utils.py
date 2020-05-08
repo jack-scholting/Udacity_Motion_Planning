@@ -172,26 +172,41 @@ def a_star(grid, h, start, goal):
 
 
 def heuristic(position, goal_position):
-    # Note: This is Euclidean distance, which works for both gird and 
-    # graph based discretizations of the environment.
-    return np.sqrt((goal_position[0]-position[0])**2 + (goal_position[1]-position[1])**2)
-
     # Note: The implementation provided in the starter code, shown below, 
     # is very slow. It takes multiple minutes to run A* with this heuristic.
     #return np.linalg.norm(np.array(position) - np.array(goal_position))
 
+    # Note: This is Euclidean distance, which works for both gird and 
+    # graph based discretizations of the environment.
+    return np.sqrt((goal_position[0]-position[0])**2 + (goal_position[1]-position[1])**2)
 
-#TODO: Document these functions. What version of collinearity? Where pulled from?
+
 def point(p):
+    """
+    Converts an (x,y) tuple to an [x,y,z] array.
+
+    This function was pulled from section 3.9 "Putting it Together Exercise".
+    """
+    print(p)
+    print(np.array([p[0], p[1], 1.]).reshape(1, -1))
+
     return np.array([p[0], p[1], 1.]).reshape(1, -1)
 
 def collinearity_check(p1, p2, p3, epsilon=1e-6):   
+    """
+    Checks if three points are all in a line.
+
+    This function was pulled from section 3.9 "Putting it Together Exercise".
+    """
     m = np.concatenate((p1, p2, p3), 0)
     det = np.linalg.det(m)
     return abs(det) < epsilon
 
 def prune_path(path):
     """
+    Removes points in the path that are collinear.
+
+    This function was pulled from section 3.9 "Putting it Together Exercise".
     """
     pruned_path = [p for p in path]
     
@@ -214,48 +229,3 @@ def prune_path(path):
         else:
             i += 1
     return pruned_path
-
-# def prune_path(path):
-#     if path is not None:
-#         pruned_path = []
-
-#         # At a selected point, grab the next two. If they are all collinear,
-#         # then remove the middle point. If they aren't increment to the 
-#         # next point.
-#         start = 0
-#         mid = 1
-#         end = 2
-        
-#         end_collinear = False
-        
-#         # Keep pruning until our 3rd point is the last in the path.
-#         while(end < len(path)-1):
-    
-#             pruned_path.append(path[start])
-            
-#             while (collinearity_check(point(path[start]), point(path[mid]), point(path[end]))):
-                
-#                 if (end < len(path)-1):
-#                     # Move to the next point to test.
-#                     mid  = end
-#                     end += 1
-#                 else:
-#                     # end is the last point, and everything is collinear.
-#                     break
-
-#             if (end < len(path)-1):
-#                 # Scoot all points
-#                 start = mid
-#                 mid   = end
-#                 end  += 1
-#             else:
-#                 # Reached the end, and last points not collinear. Add mid.
-#                 pruned_path.append(path[mid])
-                    
-#         # Always add the last point (destination)
-#         pruned_path.append(path[len(path)-1])
-            
-#     else:
-#         pruned_path = path
-        
-#     return pruned_path

@@ -9,7 +9,7 @@ from planning_utils import a_star, heuristic, create_grid, prune_path
 from udacidrone import Drone
 from udacidrone.connection import MavlinkConnection
 from udacidrone.messaging import MsgID
-from udacidrone.frame_utils import global_to_local, local_to_global
+from udacidrone.frame_utils import global_to_local
 
 """
 Test Points
@@ -17,14 +17,14 @@ The following goals are geodetic coordinates within the colliders.csv map.
 Note: Map center is: -122.397450, 37.792480
 Note: Format is LON, LAT.
 """
-SF_FINANCIAL_DISTRICT = [-122.402004, 37.791022]
 CALIFORNIA_ST = [-122.396344, 37.793877]
 POINT_01 = [-122.399050, 37.793160]
 POINT_02 = [-122.397770, 37.794369]
-ON_TALL_BUILDING = [-122.399270, 37.793050]
+INVALID_SF_FINANCIAL_DISTRICT = [-122.402004, 37.791022]
+INVALID_ON_TALL_BUILDING = [-122.399270, 37.793050]
 
 # Goal position used during planning.
-GOAL_POSITION = SF_FINANCIAL_DISTRICT
+GOAL_POSITION = POINT_02
 
 class States(Enum):
     MANUAL = auto()
