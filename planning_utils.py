@@ -142,7 +142,6 @@ def a_star(grid, h, start, goal):
                 found = True
                 break
             else:
-                # print("Current cost: {}".format(current_cost))
                 for action in valid_actions(grid, current_node):
                     # get the tuple representation
                     da = action.delta
@@ -187,9 +186,6 @@ def point(p):
 
     This function was pulled from section 3.9 "Putting it Together Exercise".
     """
-    print(p)
-    print(np.array([p[0], p[1], 1.]).reshape(1, -1))
-
     return np.array([p[0], p[1], 1.]).reshape(1, -1)
 
 def collinearity_check(p1, p2, p3, epsilon=1e-6):   

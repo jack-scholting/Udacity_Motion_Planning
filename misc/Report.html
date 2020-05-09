@@ -1,0 +1,1452 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementNumber { color: #2E9269; }
+.TextSegElementString { color: #3A7726; }
+.TextSegElementComment { color: #786A41; }
+.TextSegElementOperator { }
+.TextSegElementIndentation { }
+</style>
+<title>Comparison_Report</title>
+</head>
+<body>
+Comparison_Report<br>
+Produced: 5/3/2020 4:07:20 PM<br>
+&nbsp; &nbsp;
+<br>
+Mode:&nbsp; All, With Context &nbsp;
+<br>
+Left file: C:\Users\bh49358\Downloads\Archive\backyard_flyer_solution.py &nbsp;
+<br>
+Right file: C:\Users\bh49358\Downloads\Archive\motion_planning.py &nbsp;
+<br>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">time</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">time</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">numpy</span> <span class="TextSegElementKeyword">as</span> <span class="TextSegElementIdentifier">np</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">numpy</span> <span class="TextSegElementKeyword">as</span> <span class="TextSegElementIdentifier">np</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">from</span> <span class="TextSegElementIdentifier">enum</span> <span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Enum</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">from</span> <span class="TextSegElementIdentifier">enum</span> <span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Enum</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">from</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">enum</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">auto</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">msgpack</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">argparse</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">from</span> <span class="TextSegElementIdentifier">udacidrone</span> <span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Drone</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">from</span> <span class="TextSegElementIdentifier">udacidrone</span> <span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Drone</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">from</span> <span class="TextSegElementIdentifier">udacidrone</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">messaging</span> <span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">MsgID</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">from</span> <span class="TextSegElementIdentifier">udacidrone</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">messaging</span> <span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">MsgID</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">from</span> <span class="TextSegElementIdentifier">udacidrone</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">connection</span> <span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">MavlinkConnection</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">from</span> <span class="TextSegElementIdentifier">udacidrone</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">connection</span> <span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">MavlinkConnection</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">from</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">planning_utils</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a_star</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">heuristic</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">create_grid</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">from</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">udacidrone</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">frame_utils</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">global_to_local</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">from</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">udacidrone</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">connection</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">WebSocketConnection</span><span class="TextSegInsigDiff">&nbsp; # noqa: F401</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">class</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Enum</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">class</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Enum</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; MANUAL = <span class="TextSegSigDiff">0</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; MANUAL = <span class="TextSegSigDiff">auto</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; ARMING = <span class="TextSegSigDiff">1</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; ARMING = <span class="TextSegSigDiff">auto</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; TAKEOFF = <span class="TextSegSigDiff">2</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; TAKEOFF = <span class="TextSegSigDiff">auto</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; WAYPOINT = <span class="TextSegSigDiff">3</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; WAYPOINT = <span class="TextSegSigDiff">auto</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; LANDING = <span class="TextSegSigDiff">4</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; LANDING = <span class="TextSegSigDiff">auto</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; DISARMING = <span class="TextSegSigDiff">5</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; DISARMING = <span class="TextSegSigDiff">auto</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">PLANNING</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">auto</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSigMod">class <span class="TextSegSigDiff">B</span><span class="TextSegSigDiff">ackyardFlyer</span>(Drone):</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSigMod">class <span class="TextSegSigDiff">MotionPlanning</span>(Drone):</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">__init__</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">connection</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">__init__</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">connection</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">super</span><span class="TextSegElementOperator">().</span><span class="TextSegElementIdentifier">__init__</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">connection</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">super</span><span class="TextSegElementOperator">().</span><span class="TextSegElementIdentifier">__init__</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">connection</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">target_position</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">np</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">array</span><span class="TextSegElementOperator">([</span><span class="TextSegElementNumber">0.0</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementNumber">0.0</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementNumber">0.0</span><span class="TextSegElementOperator">])</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">target_position</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">np</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">array</span><span class="TextSegElementOperator">([</span><span class="TextSegElementNumber">0.0</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementNumber">0.0</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementNumber">0.0</span><span class="TextSegElementOperator">])</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; self.<span class="TextSegSigDiff">all_</span>waypoints = []</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; self.waypoints = []</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">in_mission</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">True</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">in_mission</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">True</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">check_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">{}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">check_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">{}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # initial state</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # initial state</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">MANUAL</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">MANUAL</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # register all your callbacks here</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # register all your callbacks here</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">register_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">MsgID</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">LOCAL_POSITION</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_position_callback</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">register_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">MsgID</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">LOCAL_POSITION</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_position_callback</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">register_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">MsgID</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">LOCAL_VELOCITY</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">velocity_callback</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">register_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">MsgID</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">LOCAL_VELOCITY</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">velocity_callback</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">register_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">MsgID</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">STATE</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">state_callback</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">register_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">MsgID</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">STATE</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">state_callback</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">local_position_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">local_position_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">TAKEOFF</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">TAKEOFF</span>:</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">-</span><span class="TextSegElementNumber">1.0</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_position</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">&gt;</span> <span class="TextSegElementNumber">0.95</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">target_position</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">]</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">-</span><span class="TextSegElementNumber">1.0</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_position</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">&gt;</span> <span class="TextSegElementNumber">0.95</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">target_position</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">]</span>:</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">all_waypoints</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">calculate_box</span><span class="TextSegSigDiff">()</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">waypoint_transition</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">waypoint_transition</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">elif</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">WAYPOINT</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">elif</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">WAYPOINT</span>:</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">np</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">linalg</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">norm</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">target_position</span><span class="TextSegElementOperator">[</span>0:2<span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_position</span><span class="TextSegElementOperator">[</span>0:2<span class="TextSegElementOperator">])</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">1.0</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">np</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">linalg</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">norm</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">target_position</span><span class="TextSegElementOperator">[</span>0:2<span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_position</span><span class="TextSegElementOperator">[</span>0:2<span class="TextSegElementOperator">])</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">1.0</span>:</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if len(self.<span class="TextSegSigDiff">all_</span>waypoints) &gt; 0:</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if len(self.waypoints) &gt; 0:</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">waypoint_transition</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">waypoint_transition</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">else</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">else</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">np</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">linalg</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">norm</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_velocity</span><span class="TextSegElementOperator">[</span>0:2<span class="TextSegElementOperator">])</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">1.0</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">np</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">linalg</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">norm</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_velocity</span><span class="TextSegElementOperator">[</span>0:2<span class="TextSegElementOperator">])</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">1.0</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">landing_transition</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">landing_transition</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">velocity_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">velocity_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">LANDING</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">LANDING</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">global_position</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">global_home</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">0.1</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">global_position</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">global_home</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">0.1</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">abs</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_position</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">])</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">0.01</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">abs</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">local_position</span><span class="TextSegElementOperator">[</span>2<span class="TextSegElementOperator">])</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">0.01</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">disarming_transition</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">disarming_transition</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">state_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">state_callback</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">in_mission</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">in_mission</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">MANUAL</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">MANUAL</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">arming_transition</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">arming_transition</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">elif</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">ARMING</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">elif</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">ARMING</span>:</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">armed</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">armed</span>:</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">plan_path</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">elif</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">flight_state</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">==</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">States</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">PLANNING</span><span class="TextSegSigDiff">:</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="TextSegSigDiff">&nbsp; &nbsp; </span>self.takeoff_transition()</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; self.takeoff_transition()</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">elif</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">DISARMING</span>:</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">elif</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">DISARMING</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">~</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">armed</span> <span class="TextSegElementOperator">&amp;</span> <span class="TextSegElementOperator">~</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">guided</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">~</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">armed</span> <span class="TextSegElementOperator">&amp;</span> <span class="TextSegElementOperator">~</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">guided</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">manual_transition</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">manual_transition</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">def</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calculate_box</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">)</span><span class="TextSegSigDiff">:</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">print</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">&quot;Setting Home&quot;</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">local_waypoints</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[[</span><span class="TextSegSigDiff">10.0</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0.0</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">3.0</span><span class="TextSegSigDiff">],</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">10.0</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">10.0</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">3.0</span><span class="TextSegSigDiff">],</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">0.0</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">10.0</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">3.0</span><span class="TextSegSigDiff">],</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">0.0</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0.0</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">3.0</span><span class="TextSegSigDiff">]]</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">local_waypoints</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">73</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">arming_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">73</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">arming_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">74</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">ARMING</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">74</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">ARMING</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">75</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;arming transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">75</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;arming transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">76</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">arm</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">76</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">arm</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">77</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">take_control</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">77</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">take_control</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">78</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">set_home_position</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">global_position</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">0</span><span class="TextSegSigDiff">],</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">global_position</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">1</span><span class="TextSegSigDiff">],</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">79</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">global_position</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">2</span><span class="TextSegSigDiff">])</span><span class="TextSegInsigDiff">&nbsp; # set the current location to be the home position</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">80</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">78</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">81</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">takeoff_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">79</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">takeoff_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">82</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">TAKEOFF</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">80</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">TAKEOFF</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">83</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;takeoff transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">81</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;takeoff transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">84</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # self.global_home = np.copy(self.global_position)&nbsp; # can't write to this variable!</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">85</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">target_altitude</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">3.0</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">86</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">target_position</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">2</span><span class="TextSegSigDiff">]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">target_altitude</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">87</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; self.takeoff(target_<span class="TextSegSigDiff">al</span>ti<span class="TextSegSigDiff">tude</span>)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">82</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; self.takeoff(<span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span>target_<span class="TextSegSigDiff">posi</span>ti<span class="TextSegSigDiff">on</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">2</span><span class="TextSegSigDiff">]</span>)</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">88</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">83</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">89</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">waypoint_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">84</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">waypoint_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">90</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">WAYPOINT</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">85</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">WAYPOINT</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">91</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;waypoint transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">86</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;waypoint transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">92</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; self.target_position = self.<span class="TextSegSigDiff">all_</span>waypoints.pop(0)</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">87</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; self.target_position = self.waypoints.pop(0)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">93</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'target position'</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">target_position</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">88</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'target position'</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">target_position</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">94</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; self.cmd_position(self.target_position[0], self.target_position[1], self.target_position[2], <span class="TextSegSigDiff">0</span><span class="TextSegSigDiff">.0</span>)</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">89</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; self.cmd_position(self.target_position[0], self.target_position[1], self.target_position[2], <span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">target_position</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">3</span><span class="TextSegSigDiff">]</span>)</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">95</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">90</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">96</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">landing_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">91</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">landing_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">97</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">LANDING</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">92</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">LANDING</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">98</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;landing transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">93</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;landing transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">99</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">land</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">94</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">land</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">100</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">95</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">101</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">disarming_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">96</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">disarming_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">102</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">DISARMING</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">97</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">DISARMING</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">103</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;disarm transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">98</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;disarm transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">104</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">disarm</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">99</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">disarm</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">105</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">release_control</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">100</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">release_control</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">106</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">101</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">107</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">manual_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">102</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">manual_transition</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">108</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">MANUAL</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">103</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">flight_state</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">States</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">MANUAL</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">109</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;manual transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">104</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;manual transition&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">110</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">stop</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">105</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">stop</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">111</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">in_mission</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">False</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">106</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">in_mission</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">False</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">107</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">108</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">def</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">send_waypoints</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">)</span><span class="TextSegSigDiff">:</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">109</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">print</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">&quot;Sending waypoints to simulator ...&quot;</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">110</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">data</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">msgpack</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">dumps</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">waypoints</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">111</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">connection</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">_master</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">write</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">data</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">112</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">113</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">def</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">plan_path</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">)</span><span class="TextSegSigDiff">:</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">114</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">flight_state</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">States</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">PLANNING</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">115</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">print</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">&quot;Searching for a path ...&quot;</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">116</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">TARGET_ALTITUDE</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">5</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">117</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">SAFETY_DISTANCE</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">5</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">118</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">119</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">target_position</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">2</span><span class="TextSegSigDiff">]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">TARGET_ALTITUDE</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">120</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">121</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: read lat0, lon0 from colliders into floating point values</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">122</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">123</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: set home position to (lon0, lat0, 0)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">124</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">125</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: retrieve current global position</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">126</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">127</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: convert to current local position using global_to_local()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">128</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">129</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">print</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'global home {0}, position {1}, local position {2}'</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">format</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">global_home</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">global_position</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">130</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">local_position</span><span class="TextSegSigDiff">))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">131</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Read in obstacle map</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">132</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">data</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">np</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">loadtxt</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'colliders.csv'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">delimiter</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">','</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">dtype</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">'Float64'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">skiprows</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">2</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">133</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">134</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Define a grid for a particular altitude and safety margin around obstacles</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">135</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">grid</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">north_offset</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">east_offset</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">create_grid</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">data</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">TARGET_ALTITUDE</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">SAFETY_DISTANCE</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">136</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">print</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">&quot;North offset = {0}, east offset = {1}&quot;</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">format</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">north_offset</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">east_offset</span><span class="TextSegSigDiff">))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">137</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Define starting point on the grid (this is just grid center)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">138</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">grid_start</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(-</span><span class="TextSegSigDiff">north_offset</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">-</span><span class="TextSegSigDiff">east_offset</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">139</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: convert start position to current position rather than map center</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">140</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">141</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Set goal as some arbitrary position on the grid</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">142</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">grid_goal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(-</span><span class="TextSegSigDiff">north_offset</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">10</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">-</span><span class="TextSegSigDiff">east_offset</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">10</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">143</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: adapt to set goal as latitude / longitude position and convert</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">144</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">145</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Run A* to find a path from start to goal</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">146</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: add diagonal motions with a cost of sqrt(2) to your A* implementation</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">147</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # or move to a different search space such as a graph (not done here)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">148</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">print</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'Local Start and Goal: '</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">grid_start</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">grid_goal</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">149</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">path</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">_</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a_star</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">grid</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">heuristic</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">grid_start</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">grid_goal</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">150</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: prune path to minimize number of waypoints</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">151</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO (if you're feeling ambitious): Try a different approach altogether!</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">152</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">153</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Convert path to waypoints</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">154</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">waypoints</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[[</span><span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">0</span><span class="TextSegSigDiff">]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">north_offset</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">1</span><span class="TextSegSigDiff">]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">east_offset</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">TARGET_ALTITUDE</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0</span><span class="TextSegSigDiff">]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">for</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">p</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">in</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">path</span><span class="TextSegSigDiff">]</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">155</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Set self.waypoints</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">156</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">waypoints</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">waypoints</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">157</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # TODO: send waypoints to sim (this is just for visualization of waypoints)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">158</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">send_waypoints</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">159</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">112</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">start</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">160</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementKeyword">def</span> <span class="TextSegElementIdentifier">start</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">)</span>:</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">113</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">start_log</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;Logs&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;NavLog.txt&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">161</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">start_log</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;Logs&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;NavLog.txt&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">114</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # self.connect()</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">115</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">162</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">116</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;starting connection&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">163</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementKeyword">print</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;starting connection&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">117</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # self.connection.start()</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">164</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">self</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">connection</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">start</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">118</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">165</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">119</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">super</span><span class="TextSegSigDiff">().</span><span class="TextSegSigDiff">start</span><span class="TextSegSigDiff">()</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">120</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">121</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Only required if they do threaded</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">166</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # Only required if they do threaded</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">122</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # while self.in_mission:</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">167</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; # while self.in_mission:</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">123</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; #&nbsp; &nbsp; pass</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">168</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; #&nbsp; &nbsp; pass</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">124</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">169</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">125</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">stop_log</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">170</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegElementIdentifier">self</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">stop_log</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">126</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">171</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">127</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">172</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">128</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">__name__</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementString">&quot;__main__&quot;</span>:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">173</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">__name__</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementString">&quot;__main__&quot;</span>:</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">174</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">parser</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">argparse</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">ArgumentParser</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">175</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">parser</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">add_argument</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'--port'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">type</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">int</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">default</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">5760</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">help</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">'Port number'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">176</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">parser</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">add_argument</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'--host'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">type</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">str</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">default</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">'127.0.0.1'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">help</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">&quot;host address, i.e. '127.0.0.1'&quot;</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">177</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">args</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">parser</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">parse_args</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">178</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">129</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; conn = MavlinkConnection('tcp:<span class="TextSegSigDiff">127.0</span><span class="TextSegSigDiff">.0</span><span class="TextSegSigDiff">.1:5760'</span>, t<span class="TextSegSigDiff">hreaded</span>=<span class="TextSegSigDiff">False</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">PX4</span><span class="TextSegSigDiff">=</span><span class="TextSegSigDiff">False</span>)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">179</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; conn = MavlinkConnection('tcp:<span class="TextSegSigDiff">{0}:{1}'</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">format</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">args</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">host</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">args</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">port</span><span class="TextSegSigDiff">)</span>, t<span class="TextSegSigDiff">imeout</span>=<span class="TextSegSigDiff">60</span>)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">130</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; #conn = WebSocketConnection('ws://127.0.0.1:5760')</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">131</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; drone = <span class="TextSegSigDiff">B</span><span class="TextSegSigDiff">ackyardFlyer</span>(conn)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">180</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; drone = <span class="TextSegSigDiff">MotionPlanning</span>(conn)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">132</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; time.sleep(<span class="TextSegSigDiff">2</span>)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">181</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; time.sleep(<span class="TextSegSigDiff">1</span>)</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">182</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">133</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementIdentifier">drone</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">start</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">183</td>
+<td class="TextItemSame"><span class="TextSegElementIndentation">&nbsp;&nbsp;&nbsp; </span><span class="TextSegElementIdentifier">drone</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">start</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+</table>
+<br>
+</body>
+</html>
