@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is the "3D Motion Planning" project in the Udacity Flying Car NanoDegree program. It is one of the 3 major projects in the program.
+This is the "3D Motion Planning" project in the Udacity Flying Car NanoDegree program. It is one of the three major projects in the program.
 
 One of the core problems of making Flying Cars (autonomous flying vehicles), is motion planning. These flying cars will need to know how to navigate our world, given a starting point (passenger pickup location) and ending point (passenger destination). You can't get from A to B in the real world by flying a straight line between them at a fixed altitude. Instead, the flying car will have to avoid obstacles and maybe fly some pre-determined routes.
 
@@ -12,7 +12,7 @@ So 3D Motion Planning involves the following things:
 
 - Represent the world - discretize the world into a grid/graph from a map.
 - Define start and goal positions - coordinate systems.
-- Use a search algorithm and waypoint simplification algorithm to find an efficient path through the obstactles to the goal.
+- Use a search algorithm and waypoint simplification algorithm to find an efficient path through the obstacles to the goal.
 
 The solution discussed in this write-up discretizes the world into a graph, finds a path using the A* algorithm, and performs waypoint pruning using collinearity testing.
 
@@ -50,21 +50,23 @@ This document is the Writeup / README. Below I describe how I addressed each rub
 
 #### 1. Explain the functionality of what's provided in `motion_planning.py` and `planning_utils.py`
 
-Note: The starter code can be found here: <https://github.com/udacity/FCND-Motion-Planning>
+Note: The starter code can be found here: <https://github.com/udacity/FCND-Motion-Planning>. The "Backyard Flyer" solution is included in the starter code repository as well. The "Backyard Flyer" was the introductory project in this NanoDegree.
 
 The motion planning starter code can be thought of as the "Backyard Flyer" code, with one major modification - the four static "box" waypoints are replaced by a more flexible **planning** step that determines the waypoints.
 
-To add this planning step, first a "PLANNING" state was introduced. (see definition "States(Enum)")
+To add this planning step, first a "PLANNING" state was introduced. (see `States(Enum)`)
 
-Over the course of a flight, this "PLANNING" state takes place after the "ARMING" state, but before the "TAKEOFF" state. (see "state_callback()")
+Over the course of a flight, this "PLANNING" state takes place after the "ARMING" state, but before the "TAKEOFF" state. (see `state_callback()`). So the normal sequence of states is as follows:
 
-The ultimate goal/output of the planning step is a set of waypoints. (see "self.waypoints")
+MANUAL -> ARMING -> [PLANNING] -> TAKEOFF -> WAYPOINT -> LANDING -> DISARMING -> MANUAL
 
-The planning step is implemented by the "plan_path()" function. This function ties together all the utilities found in the "planning_utils.py" file.
+The ultimate goal/output of the planning step is a set of waypoints. (see `self.waypoints`)
 
-The main two utilities provided in "planning_utils.py" are "create_grid()" and "a_star()". The other functions and definitions in "planning_utils.py" exist simply to support those two main utilities. The utility "create_grid()" takes the colliders.csv data and builds us a representation of the world, including freespace and obstacles, that the "a_star()" utility can use to find an efficient path (or set of waypoints) from the start to the goal positions.
+The planning step is implemented by the `plan_path()` function. This function ties together all the utilities found in the `planning_utils.py` file.
 
-Note: For a more detailed comparison between the "Backyard Flyer" and the motion planning starter code, see the included "Comparison_Report.pdf".
+The main two utilities provided in `planning_utils.py` are `create_grid()` and `a_star()`. The other functions and definitions in `planning_utils.py` exist simply to support those two main utilities. The utility `create_grid()` takes the colliders.csv data and builds us a representation of the world, including freespace and obstacles, that the `a_star()` utility can use to find an efficient path (or set of waypoints) from the start to the goal positions.
+
+Note: For a more detailed comparison between the "Backyard Flyer" and the motion planning starter code, see the included "Comparison_Report.html".
 
 ### Implementing Your Path Planning Algorithm
 
@@ -109,7 +111,7 @@ local_pos = global_to_local(self.global_position, self.global_home)
 
 The `global_to_local()` function was already implemented in `udacidrone.frame_utils`. The parameter `self.global_home` was determined in the previous step. The parameter `self.global_position` was available to use per the API.
 
-Note: I doesn't appear that I needed to do this "Set your current local position" step. Per the API documentation, `self.local_position` is available and provides the same information.
+Note: It doesn't appear that I needed to do this "Set your current local position" step. Per the API documentation, `self.local_position` is available and provides the same information.
 
 #### 3. Set grid start position from local position
 
@@ -132,7 +134,7 @@ The `north_offset` and `east_offset` were provided by the `create_grid()` functi
 
 #### 4. Set grid goal position from geodetic coords
 
-The starter code hardcoded the goal position as some location 10m north and 10m east of map center. The code should allow the goal to be set to any arbitrary position on the grid given geodetic coordinates (latitude, longitude).
+The starter code hardcoded the goal position as some location 10 m north and 10 m east of map center. The code should allow the goal to be set to any arbitrary position on the grid given geodetic coordinates (latitude, longitude).
 
 I replaced the following starter code:
 
@@ -282,11 +284,11 @@ I verified my solution by flying a series of goal points around the map, one aft
 
 ## Additional Modifications
 
-The started code needed to be modified in a few ways that weren't mentioned in the project assignment. Those modifications are discussed here:
+The starter code needed to be modified in a few ways that weren't mentioned in the project assignment. Those modifications are discussed here:
 
 ### A* Heuristic Speed
 
-The started code provided an A* that was Euclidean distance. It used the following code:
+The starter code provided an A* that was Euclidean distance. It used the following code:
 
 ```python
 return np.linalg.norm(np.array(position) - np.array(goal_position))
@@ -302,7 +304,7 @@ return np.sqrt((goal_position[0]-position[0])**2 + (goal_position[1]-position[1]
 
 ### A* Robustness
 
-When I first started creating goal positions to test my solution, I was using google maps and for some reasons my solution would take 10 minutes to tell me that it could not find a path. It was frustrating because it took a long time, and I thought my goal position was valid.
+When I first started creating goal positions to test my solution, I was using google maps and for some reason my solution would take 10 minutes to tell me that it could not find a path. It was frustrating because it took a long time, and I thought my goal position was a valid one.
 
 To address this, I added a sanity check in A* to immediately report if the goal position was invalid (i.e. it was inside an obstacle).
 
@@ -335,7 +337,7 @@ This solution is designed to ascend to a particular altitude, fly a path at that
 - Deadbands - to allow smooth transitions through waypoints. The deadband could be a function of velocity by modifying the logic in the local_position_callback() function.
 - Probabisitic Roadmap - break free from the fixed altitude and perform efficient full 3D planning.
 - Receding Horizon Planning - perform more detailed local planning to deal with errors in the map.
-- Automatic Replanning - constantly checking if the path to next waypoint is feasible, or if new plan needs to be developed.
+- Automatic Replanning - constantly checking if the path to next waypoint is feasible, or if a new plan needs to be created.
 - Add heading commands to waypoints - to allow creation of more interesting flight paths.
-- Implement a vehicle model that takes dynamic contraints into account.
+- Implement a vehicle model that takes dynamic constraints into account.
 - Potential Field based planning
